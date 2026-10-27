@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Microsoft JhengHei", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Grotesk", ui-monospace, SFMono-Regular, monospace;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    border-color: rgba(6, 182, 212, 0.16);
+    box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.5), 0 0 12px rgba(6, 182, 212, 0.04);
+  }
+  50% {
+    border-color: rgba(6, 182, 212, 0.45);
+    box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.5), 0 0 24px rgba(6, 182, 212, 0.22);
+  }
+}
+
+@keyframes scan {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* Gorgeous high-end breathing cyber border & fluid hover float */
+.breathe-panel {
+  animation: glow-pulse 6s ease-in-out infinite;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.breathe-panel:hover {
+  transform: translateY(-8px) scale(1.012);
+  border-color: rgba(34, 211, 238, 0.7) !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 
+              0 0 30px 4px rgba(34, 211, 238, 0.28) !important;
+}
+
+.recharts-wrapper,
+.recharts-surface,
+.recharts-pie-sector:focus,
+path:focus,
+g:focus,
+svg:focus,
+.recharts-layer:focus,
+.recharts-pie-sector,
+.recharts-sector,
+.recharts-sector:focus {
+  outline: none !important;
+}
+
+div[tabindex]:focus {
+  outline: none !important;
+}
+
